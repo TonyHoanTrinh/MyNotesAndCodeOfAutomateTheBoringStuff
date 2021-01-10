@@ -1,0 +1,12 @@
+#! /usr/bin/env python3
+
+import pyzmail
+message = pyzmail.PyzMessage.factory(rawMessages[40041]['BODY[]'])
+message.get_subject()
+message.get_addresses('from')
+message.get_addresses('to')
+message.get_addresses('cc')
+message.get_addresses('bcc')
+
+message.text_part != None
+message.text_part.get_payload().decode(
